@@ -1,0 +1,35 @@
+<odoo>
+    <record id="view_product_template_form_inherited" model="ir.ui.view">
+        <field name="name">product.template.form.inherited</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="product.product_template_only_form_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='barcode']" position="after">
+<!--                <page name="brand" string="Brand" groups="product.group_product_variant">-->
+
+                        <field name="brand_id"/>
+<!--                </page>-->
+            </xpath>
+            <xpath expr="//field[@name='brand_id']" position="after">
+<!--                    <page name="model" string="Model" groups="product.group_product_variant">-->
+
+                        <field name="model_name"/>
+
+<!--                </page>-->
+            </xpath>
+<!--            <xpath expr="//page[@name='model']" position="after">-->
+<!--                <page name="price_group" string="Price Group" groups="product.group_product_variant">-->
+<!--                    <group>-->
+<!--                        <field name="model_name"/>-->
+<!--                        <field name="group"/>-->
+<!--                        <field name="price_from"/>-->
+<!--                        <field name="price_to"/>-->
+<!--                        <field name="display_name"/>-->
+
+<!--                    </group>-->
+<!--                </page>-->
+<!--            </xpath>-->
+
+        </field>
+    </record>
+</odoo>
